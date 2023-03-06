@@ -38,53 +38,64 @@
 }
 
 .TRACcolor{
-  padding: 10%;
-  height: 90%;
+  align-items: center;
+display: flex;
+justify-content: center;
+  height: 100%;
 background-color: #B3F5FF;  
 }
 
 
 
 .DEBGcolor{
-  padding: 10%;
-  height: 90%;
-  width: 90%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 
+  height: 100%;
+ 
 background-color: #8FE5A6;
 }
 
 .INFOcolor{ 
-  padding: 10%;
-  height: 90%;
-  width: 90%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 
+  height: 100%;
   background-color: #6AE66E;
 }
 
 .WARNcolor{
-  padding: 10%;
-  height: 90%;
-  width: 90%;
+  display: flex;
+  align-items: center;
 
+  justify-content: center;
+
+  height: 100%;
   background-color: #FFF970;
 }
 
 .ERROcolor{
-  padding: 10%;
-  height: 90%;
-  width: 90%;
+  align-items: center;
+  display: flex;
 
+  justify-content: center;
+  height: 100%;
+ 
   background-color:#FF9269;
 }
 
 .FATLcolor {
-  padding: 10%;
-width: 90%;
-  height: 90%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
   background-color: #FF3D30;
 }
 
 .errors{
+
   padding:1%;
   border-style: solid;
 border-color:gainsboro;
@@ -96,9 +107,10 @@ text-align: left;
 
 .css-error-cards{
 
-overflow:scroll;
-border-radius: 2%;
-padding: 2px;
+overflow-y:scroll;
+overflow-x: hidden;
+border-top-left-radius:1%;
+
 height: 80vh;
 
 }

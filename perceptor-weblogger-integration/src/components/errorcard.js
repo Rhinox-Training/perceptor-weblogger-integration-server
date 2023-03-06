@@ -53,10 +53,10 @@ return (
         
     
 
-        <Container className={`${props.logType} errors`} key={props.id} id={props.id}>
+        <Container className={`${props.logType} errors p-0`} key={props.id} id={props.id}>
 
             <Row>
-                <Col xs={1}><div className={`${props.logType}color text-center`}> {icon}</div></Col>
+                <Col xs={1}><div className={`${props.logType}color`}> {icon}</div></Col>
                 <Col xs={1}>{props.nr}. </Col>
                 
                 <Col xs={2}>{props.timestamp.split(" ")[1]}</Col>

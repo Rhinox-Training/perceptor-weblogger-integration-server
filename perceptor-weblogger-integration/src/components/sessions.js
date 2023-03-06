@@ -2,10 +2,11 @@ import React, {useEffect, useState}  from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { useLocation } from 'react-router-dom';
 function Sessions(props){
     const [sessionData, setData] = useState([]);
-
-    const params = new URLSearchParams(document.location.search);
+    const location = useLocation()
+    const params = new URLSearchParams(location.search);
     const projectid = params.get("projectid");
 
     const apiUrl = "http://localhost/webdebugmaster/"
@@ -26,7 +27,7 @@ function Sessions(props){
 
     async function getApi(url) {
 
-        const responseSessions = await fetch(url + `sessionsdata.php?sessionId=${projectid}`);
+        const responseSessions = await fetch(url + `sessionsdata.php?projectId=${projectid}`);
         var dataSessions = await responseSessions.json();
         setData(dataSessions);
 
@@ -40,7 +41,7 @@ function Sessions(props){
 
   
         
-            const paramstemp = new URLSearchParams(document.location.search);
+            const paramstemp = new URLSearchParams(location.search);
             const newid = paramstemp.get("projectid");
       
             if(newid !==projectid)
@@ -69,11 +70,11 @@ function Sessions(props){
 
     <Card key={index + 1} id={p.id}>
       <Card.Body>
-        <Card.Title>Session : {index +1}</Card.Title>
+        <Card.Title>Session : {p.id}</Card.Title>
         <Card.Text>
         {p.timestamp}
         </Card.Text>
-        <Button key={index} as={Link} to={"/errors/?sessionId="+p.id+"&index="+(index+1)}  variant="primary">see errors</Button>
+        <Button key={index} as={Link} to={"/errors?sessionId="+p.id}  variant="primary">see errors</Button>
       </Card.Body>
     </Card>
 

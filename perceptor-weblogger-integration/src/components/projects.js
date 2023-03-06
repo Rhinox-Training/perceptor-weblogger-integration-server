@@ -31,7 +31,7 @@ export default function Projects (props) {
                 <ol className='text-start' id="projects">
                  
       {projectData.map((p, index) => (<div>
-              < Link to={"/sessions/?projectid="+p.id}  key={index}>
+              < Link to={"/sessions?projectid="+p.id}  key={index}>
                 <Card >
                 <Card.Title>{p.id}. {p.name}</Card.Title>
                 <Card.Body>Amount of Sessions: {sessionData.filter(function(session){

@@ -12,9 +12,9 @@
 	}
 
 
-	if(isset($_GET['sessionId']))
+	if(isset($_GET['projectId']))
 	{
-		$id = $_GET["sessionId"];
+		$id = $_GET["projectId"];
 
 		$sql = "SELECT * FROM sessions WHERE projectId = $id";
 	$result = mysqli_query($conn ,$sql);

@@ -5,29 +5,32 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import { useLocation } from 'react-router-dom';
 export default function SessionLog (props) {
+    const location = useLocation()
+  
     const [errorData, setData] = React.useState([]);
     const [sessionData, setSData] = React.useState([]);
-    const params = new URLSearchParams(document.location.search);
-    const sessionid = params.get("sessionId");
-    const index = params.get("index");
+    const params = new URLSearchParams(location.search);
+    const indexSession = params.get("sessionId");
 
     const apiUrl = "http://localhost/webdebugmaster/"
     async function getApi(url) {
+      
 
-        const responseErrors = await fetch(url + `errorsdata.php?sessionId=${sessionid}`);
+        const responseErrors = await fetch(url + `errorsdata.php?sessionId=${indexSession}`);
    
         var dataErrors = await responseErrors.json();
         setData(dataErrors);
 
-        const responseSessions = await fetch(url + `sessionsdata.php?id=${sessionid}`)
+        const responseSessions = await fetch(url + `sessionsdata.php?id=${indexSession}`)
         var dataSession = await responseSessions.json();
         var time = dataSession[0].timestamp;
 
         setSData(dataSession);
         console.log(sessionData);
         var sessioninfo =`<h2 >Session: `;
-        sessioninfo += index + " ";
+        sessioninfo += indexSession + " ";
     
         sessioninfo += time;
         sessioninfo += `</h2>`;
@@ -35,7 +38,9 @@ export default function SessionLog (props) {
         //console.log(dataSessions);
     }
     useEffect(() => {
-        getApi(apiUrl);
+        const coroutine = async()=>{
+        await getApi(apiUrl);}
+        coroutine();
     },[]);
 
   
@@ -69,7 +74,7 @@ export default function SessionLog (props) {
 
            {errorData.map((p, index) => 
            (
-           <ErrorCard key={index + 1} logger={p.logger} logType={p.logType} id={p.id} message={p.message} nr={index + 1} timestamp={p.timestamp}/>
+           <ErrorCard key={index} logger={p.logger} logType={p.logType} id={p.id} message={p.message} nr={index} timestamp={p.timestamp}/>
           
 
           ))}</div>

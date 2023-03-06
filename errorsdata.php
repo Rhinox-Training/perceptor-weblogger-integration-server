@@ -12,7 +12,7 @@
 	}
 	if(isset($_GET['sessionId']))
 	{
-		$id = $_GET["sessionId"];
+		$id = $_GET['sessionId'];
 
 		$sql = "SELECT * FROM errors WHERE sessionId = $id";
 	$result = mysqli_query($conn ,$sql);

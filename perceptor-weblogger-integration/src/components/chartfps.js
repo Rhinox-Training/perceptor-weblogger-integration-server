@@ -29,7 +29,7 @@ const ChartFps = (props) => {
         maxfps.push(sessionInfoDat[index].maxFps);
         minfps.push(sessionInfoDat[index].minFps);
         averagefps.push(sessionInfoDat[index].averageFps)
-        console.log(time);
+    
         
     }
     

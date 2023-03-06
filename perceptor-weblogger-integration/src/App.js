@@ -110,7 +110,7 @@ function App() {
                     <div>
                       <Dropdown.Item
                         as={Link}
-                        to={"/sessions/?projectid=" + p.id}
+                        to={"/sessions?projectid=" + p.id}
                         key={index}
                       >
                         {p.id}. {p.name}
@@ -158,8 +158,8 @@ function App() {
         <Row>
           <Routes>
             <Route path={`/`} element={<Debugger />} />
-            <Route path={`/sessions/`} element={<Sessions id={1} />} />
-            <Route path="/errors/" element={<SessionLog id={1} />} />
+            <Route path={`/sessions`} element={<Sessions id={1} />} />
+            <Route path="/errors" element={<SessionLog id={1} />} />
             <Route path="/projects" element={<Projects id={1} />} />
           </Routes>
         </Row>

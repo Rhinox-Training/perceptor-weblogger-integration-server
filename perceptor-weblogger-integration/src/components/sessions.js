@@ -57,7 +57,7 @@ function Sessions(props){
        
       
      
-    },[]);
+    });
 
     return (
         <div> 

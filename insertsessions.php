@@ -1,8 +1,9 @@
 <?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbName = "webdebugmaster";
+		$ini =parse_ini_file("config.ini");
+		$servername = $ini["servername"];
+		$username =  $ini["username"];
+		$password = $ini["password"];
+		$dbName = $ini["dbName"];
 	//connection
     $timestamp = $_POST["timestamp"];
 	$projectId = $_POST["projectId"];

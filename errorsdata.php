@@ -1,9 +1,11 @@
 <?php
- header("Access-Control-Allow-Origin: *");
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbName = "webdebugmaster";
+ 	header("Access-Control-Allow-Origin: *");
+ 	
+	$ini =parse_ini_file("config.ini");
+	$servername = $ini["servername"];
+	$username =  $ini["username"];
+	$password = $ini["password"];
+	$dbName = $ini["dbName"];
 	//connection
 	$conn = new mysqli($servername,$username,$password,$dbName);
 	//check connectino

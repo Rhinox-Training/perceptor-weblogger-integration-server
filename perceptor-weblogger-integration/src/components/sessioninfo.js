@@ -4,7 +4,7 @@ import { useState,useEffect } from "react";
 import  Dropdown from "react-bootstrap/Dropdown";
 import DropdownItem from "react-bootstrap/DropdownItem";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
-import { Line } from 'react-chartjs-2';
+
 import ChartFps from './chartfps.js';
 
 export default function SessionInfo(props){

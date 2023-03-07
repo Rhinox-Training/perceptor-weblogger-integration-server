@@ -2,11 +2,11 @@ import React, {useEffect, useState}  from "react";
 import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
+import data from "./../config.json";
 export default function Projects (props) {
     const [projectData, setData] = useState([]);
     const [sessionData, setSData] = useState([]);
 
-    const apiUrl = "http://localhost/webdebugmaster/"
     async function getApi(url) {
 
         const responseProjects = await fetch(url + `projectsdata.php`);
@@ -20,7 +20,7 @@ export default function Projects (props) {
         
     }
     useEffect(() => {
-        getApi(apiUrl);
+        getApi(data.serverURL);
     },[1]);
         return (
             <Col>

@@ -17,7 +17,7 @@ import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Projects from "./components/projects";
 import Form from "react-bootstrap/Form";
-
+import data from "./config.json";
 
 function App() {
   const [currentCategories, setCategoryQuery] = useState([])
@@ -25,7 +25,6 @@ function App() {
   const [errorData,setEData] = useState([]);
   const [projectData, setData] = useState([]);
 
-  const apiUrl = "http://localhost/webdebugmaster/";
 
   function deleteAllCookies() {
     var cookies = document.cookie.split(";");
@@ -54,6 +53,7 @@ function App() {
   
   };
   async function getApi(url) {
+    console.log(url);
     const project = await fetch(url + "projectsdata.php");
     var data = await project.json();
     await setData(data);
@@ -79,8 +79,9 @@ function App() {
         
       }
     
-     // document.getElementById("ALL").checked = true;
-        getApi(apiUrl);
+ 
+     getApi(data.serverURL);
+
   },[]);
 
  

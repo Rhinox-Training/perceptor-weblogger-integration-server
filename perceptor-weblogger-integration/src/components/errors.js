@@ -3,6 +3,7 @@ import ErrorCard from "./errorcard";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import data from "./../config.json";
 
 
 
@@ -22,10 +23,9 @@ function SortErrors(){
 
 export default function errors (props){
    const [errorDat, setErrorMessages] = useState([]);
-    const apiUrl = "http://localhost/webdebugmaster/"
+
     let sessionNr = 0;
-    //var errorDat= getData(apiUrl ,"errors");
-    //let errorDat = [];
+
 
     let params = new URLSearchParams(document.location.search);
     let sessionid = params.get("sessionId");
@@ -53,13 +53,13 @@ export default function errors (props){
 
 
     useEffect(() => {
-        getApi(apiUrl);
+        getApi(data.serverURL);
 
         const interval = setInterval(() => {    
             const getErrors = async() =>
             {    
            
-                const response = await fetch(apiUrl + `errorsdata.php?sessionId=${sessionNr}`);
+                const response = await fetch(data.serverURL + `errorsdata.php?sessionId=${sessionNr}`);
                 var apiErrors = await response.json();
 
                 setErrorMessages(apiErrors);
@@ -87,7 +87,7 @@ export default function errors (props){
                 
                 <Col xs={2} >Time</Col>
                 <Col xs={6} className="message ">Message</Col>
-                <Col xs={2}className="message ">LoggerType</Col>
+                <Col xs={2} className="message ">LoggerType</Col>
             </Row>
         <div id="errorscards"   className="css-error-cards">
             {errorDat.map((error,index)=> <ErrorCard key={error.id} nr={index}  id={error.id} logType={error.logType} message={error.message} logger={error.logger} timestamp={error.timestamp}></ErrorCard>)}       

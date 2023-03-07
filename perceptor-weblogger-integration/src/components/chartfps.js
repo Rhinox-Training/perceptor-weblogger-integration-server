@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import 'chart.js/auto';
 import { Chart } from 'react-chartjs-2';
+import data from "./../config.json";
+
 const ChartFps = (props) => {
   const [chartData, setChartData] = useState( {datasets: []});
   const [sessionInfoDat, setSessionInfoDat] = useState([]);
@@ -19,7 +21,7 @@ const ChartFps = (props) => {
     let maxfps=[];
     let minfps=[];
     let averagefps=[];
-    await getApi("http://localhost/webdebugmaster/");
+    await getApi(data.serverURL);
 
 
     

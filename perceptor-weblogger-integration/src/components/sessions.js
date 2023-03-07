@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { useLocation } from 'react-router-dom';
+import data from "./../config.json";
 function Sessions(props){
     const [sessionData, setData] = useState([]);
     const location = useLocation()
     const params = new URLSearchParams(location.search);
     const projectid = params.get("projectid");
 
-    const apiUrl = "http://localhost/webdebugmaster/"
+
 
     function SortErrors(){
 
@@ -48,7 +49,7 @@ function Sessions(props){
         {window.location.reload();}  
 
         const coroutine = async()=>{
-    await getApi(apiUrl);
+    await getApi(data.serverURL);
    
             
         }

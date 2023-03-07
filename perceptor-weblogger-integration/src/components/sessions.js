@@ -30,11 +30,12 @@ function Sessions(props){
 
         const responseSessions = await fetch(url + `sessionsdata.php?projectId=${projectid}`);
         var dataSessions = await responseSessions.json();
+        dataSessions.sort(function(a, b){return b - a});
         setData(dataSessions);
 
         const responseProject = await fetch(url + `projectsdata.php?id=${projectid}`)
         var dataProject = await responseProject.json();
-     
+        
         document.getElementById("name").innerHTML = await "sessions for proj " + dataProject[0].name;
         SortErrors();
     }

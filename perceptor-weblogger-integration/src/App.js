@@ -94,7 +94,7 @@ function App() {
               <h3 >Debugmaster5000</h3>
             </Col>
             <Col >
-              <Button as={Link} to={`/?${document.cookie}`} variant="primary">
+              <Button as={Link} to={`/`} variant="primary">
                 Debugger
               </Button>
             </Col>

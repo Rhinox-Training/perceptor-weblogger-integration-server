@@ -35,7 +35,8 @@ function Sessions(props){
         const responseProject = await fetch(url + `projectsdata.php?id=${projectid}`)
         var dataProject = await responseProject.json();
      
-        document.getElementById("name").innerHTML = "sessions for proj " + dataProject[0].name;
+        document.getElementById("name").innerHTML = await "sessions for proj " + dataProject[0].name;
+        SortErrors();
     }
 
     useEffect(  () => {
@@ -55,7 +56,7 @@ function Sessions(props){
         }
     
         coroutine();
-      SortErrors();
+      
       
      
     },[]);
@@ -69,7 +70,7 @@ function Sessions(props){
 
 
 
-    <Card key={index + 1} id={p.id}>
+    <Card key={index } id={p.id}>
       <Card.Body>
         <Card.Title>Session : {p.id}</Card.Title>
         <Card.Text>

@@ -87,13 +87,17 @@ function App() {
   return (
     <div className="App" onunload="deleteAllCookies()">
       <Navbar bg="light">
-        <Container>
-          <Row className="d-flex justify-content-between">
-            <Col>
-              <h3 className="text-center">Debugmaster5000</h3>
+        <Container className="d-flex justify-content-between">
+      
+            <Col  className="text-center">
+              <h3 >Debugmaster5000</h3>
             </Col>
-        
-            <Col>
+            <Col >
+              <Button as={Link} to={`/?${document.cookie}`} variant="primary">
+                Debugger
+              </Button>
+            </Col>
+            <Col >
               <Dropdown as={ButtonGroup}>
                 <Button as={Link} to="/projects" variant="primary">
                   Projects
@@ -121,11 +125,7 @@ function App() {
                 </Dropdown.Menu>
               </Dropdown>
             </Col>
-            <Col>
-              <Button as={Link} to={`/?${document.cookie}`} variant="primary">
-                Debugger
-              </Button>
-            </Col>
+           
             <Col className="d-flex">
               <form id="searchform" onSubmit={e => { e.preventDefault(); }}>
               <Form.Control
@@ -147,10 +147,7 @@ function App() {
               </form>
             </Col>
 
-            <Col>
-              <SessionInfo sessionId={sessionId} />
-            </Col>
-          </Row>
+       
         </Container>
       </Navbar>
 

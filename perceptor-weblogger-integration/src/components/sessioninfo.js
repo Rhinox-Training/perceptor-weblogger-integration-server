@@ -74,7 +74,7 @@ function showSessionInfo() {
 
 return(
 <>
-    <Dropdown >
+    <Dropdown  className={props.className}>
     <Dropdown.Toggle  variant="primary">
           Session Info
         </Dropdown.Toggle>

@@ -20,7 +20,7 @@ function Sessions(props){
         }).forEach( function ( elem ) {
             main.appendChild( elem );
         });}
-        console.log("errors sorted");
+       
     
         
     }
@@ -49,15 +49,15 @@ function Sessions(props){
 
         const coroutine = async()=>{
     await getApi(apiUrl);
-    await SortErrors();
+   
             
         }
     
         coroutine();
-       
+      SortErrors();
       
      
-    });
+    },[]);
 
     return (
         <div> 

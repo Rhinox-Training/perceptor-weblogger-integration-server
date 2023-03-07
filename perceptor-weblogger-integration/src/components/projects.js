@@ -16,8 +16,7 @@ export default function Projects (props) {
         const responseSessions = await fetch(url + `sessionsdata.php`);
         var dataSessions = await responseSessions.json();
         setSData(dataSessions);
-        console.log("data sessions");
-        console.log(dataSessions);
+    
         
     }
     useEffect(() => {

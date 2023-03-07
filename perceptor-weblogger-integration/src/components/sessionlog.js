@@ -28,14 +28,14 @@ export default function SessionLog (props) {
         var time = dataSession[0].timestamp;
 
         setSData(dataSession);
-        console.log(sessionData);
+     
         var sessioninfo =`<h2 >Session: `;
         sessioninfo += indexSession + " ";
     
         sessioninfo += time;
         sessioninfo += `</h2>`;
         document.getElementById("CurrentSession").innerHTML = sessioninfo;
-        //console.log(dataSessions);
+      
     }
     useEffect(() => {
         const coroutine = async()=>{

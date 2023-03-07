@@ -13,7 +13,7 @@ const ReadMore = ({ children }) => {
     const text = children;
     const [isReadMore, setIsReadMore] = useState(true);
     const toggleReadMore = () => {
-        console.log("toggled");
+  
       setIsReadMore(!isReadMore);
     };
     return (

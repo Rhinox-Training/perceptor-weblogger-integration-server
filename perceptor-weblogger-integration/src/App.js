@@ -17,7 +17,7 @@ import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Projects from "./components/projects";
 import Form from "react-bootstrap/Form";
-import SessionInfo from "./components/sessioninfo";
+
 
 function App() {
   const [currentCategories, setCategoryQuery] = useState([])

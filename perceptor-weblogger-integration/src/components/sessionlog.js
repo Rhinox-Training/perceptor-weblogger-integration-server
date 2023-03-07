@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import { useLocation } from 'react-router-dom';
+import data from "./../config.json";
 export default function SessionLog (props) {
     const location = useLocation()
   
@@ -14,7 +15,6 @@ export default function SessionLog (props) {
     const params = new URLSearchParams(location.search);
     const indexSession = params.get("sessionId");
 
-    const apiUrl = "http://localhost/webdebugmaster/"
     async function getApi(url) {
       
 
@@ -39,7 +39,7 @@ export default function SessionLog (props) {
     }
     useEffect(() => {
         const coroutine = async()=>{
-        await getApi(apiUrl);}
+        await getApi(data.serverURL);}
         coroutine();
     },[]);
 

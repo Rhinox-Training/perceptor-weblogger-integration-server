@@ -6,7 +6,7 @@ import DropdownItem from "react-bootstrap/DropdownItem";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
 
 import ChartFps from './chartfps.js';
-
+import data from "./../config.json";
 export default function SessionInfo(props){
     const [sessionInfoDat, setSessionInfoDat] = useState([]);
     //const [sessionInfoDatId, setSessionInfoDatId] = useState(0);
@@ -33,7 +33,7 @@ useEffect(()=>{
    
         const interval = setInterval(() => { 
            
-    getApi("http://localhost/webdebugmaster/");
+    getApi(data.serverURL);
     showSessionInfo();
         }, 1000);
         return () => clearInterval(interval);

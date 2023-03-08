@@ -7,51 +7,51 @@ Weblogger server client integration for Perceptor Weblogger extension
 
 ## Environment
 
-[npm] (https://docs.npmjs.com/)
+[npm](https://docs.npmjs.com/)
 
-[phpmyadmin] (https://www.phpmyadmin.net/)
+[phpmyadmin](https://www.phpmyadmin.net/)
 
 ## React-dependencies
 
 ### Normal dependencies
 
-[bootstrap] (https://www.npmjs.com/package/bootstrap)
+[bootstrap](https://www.npmjs.com/package/bootstrap)
 
-[react] (https://www.npmjs.com/package/react)
+[react](https://www.npmjs.com/package/react)
 
-[react-bootstrap] (https://www.npmjs.com/package/react-bootstrap)
+[react-bootstrap](https://www.npmjs.com/package/react-bootstrap)
 
-[react-chartjs-2] (https://www.npmjs.com/package/react-chartjs-2)
+[react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2)
 
-[react-dom] (https://www.npmjs.com/package/react-dom)
+[react-dom](https://www.npmjs.com/package/react-dom)
 
-[react-icon] (https://www.npmjs.com/package/react-icon)
+[react-icon](https://www.npmjs.com/package/react-icon)
 
-[react-icons] (https://www.npmjs.com/package/react-icons)
+[react-icons](https://www.npmjs.com/package/react-icons)
 
-[react-router-dom] (https://www.npmjs.com/package/react-router-dom)
+[react-router-dom](https://www.npmjs.com/package/react-router-dom)
 
-[style-loader] (https://www.npmjs.com/package/style-loader)
+[style-loader](https://www.npmjs.com/package/style-loader)
 
 ### Dev dependencies
 
-[@babel/core] (https://www.npmjs.com/package/react-router-dom)
+[@babel/core](https://www.npmjs.com/package/react-router-dom)
 
-[@babel/preset-env] (https://www.npmjs.com/package/@babel/preset-env)
+[@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)
 
-[@babel/preset-react] https://www.npmjs.com/package/@babel/preset-react()
+[@babel/preset-react]https://www.npmjs.com/package/@babel/preset-react()
 
-[babel-loader] (https://www.npmjs.com/package/babel-loader)
+[babel-loader](https://www.npmjs.com/package/babel-loader)
 
-[css-loader] (https://www.npmjs.com/package/css-loader)
+[css-loader](https://www.npmjs.com/package/css-loader)
 
-[html-webpack-plugin] (https://www.npmjs.com/package/html-webpack-plugin)
+[html-webpack-plugin](https://www.npmjs.com/package/html-webpack-plugin)
 
-[webpack] (https://www.npmjs.com/package/webpack)
+[webpack](https://www.npmjs.com/package/webpack)
 
-[webpack-cli] (https://www.npmjs.com/package/webpack-cli)
+[webpack-cli](https://www.npmjs.com/package/webpack-cli)
 
-[webpack-dev-server] (https://www.npmjs.com/package/webpack-dev-server)
+[webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)
 
 
 # Setup
@@ -60,7 +60,7 @@ Weblogger server client integration for Perceptor Weblogger extension
 
 ### php database
 
--download xampp from  [xampp-download] (https://www.apachefriends.org/download.html)
+-download xampp from  [xampp-download](https://www.apachefriends.org/download.html)
 
 -install xampp as close to your root folder on the drive as possible.
 

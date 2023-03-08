@@ -98,10 +98,9 @@ the file `index.html` in this folders opens the website
 
 ##### run with webpack web server
 
-- open rootfolder in command prompt. 
+- open rootfolder from this project in command prompt. 
 
-- run command `cd perceptor-weblogger-integration`  
-and `npm run dev` in cmd
+- run command `cd perceptor-weblogger-integration` and `npm run dev` in cmd
 
 
 ## hosted webserver

@@ -100,8 +100,7 @@ the file `index.html` in this folders opens the website
 
 - open rootfolder in command prompt. 
 
-- run command `cd perceptor-weblogger-integration`  
-and `npm run dev` in cmd
+- run command `cd perceptor-weblogger-integration` and `npm run dev` in cmd
 
 
 ## hosted webserver

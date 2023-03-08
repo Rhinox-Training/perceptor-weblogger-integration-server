@@ -43,39 +43,47 @@ Weblogger server client integration for Perceptor Weblogger extension
 
 ### php database
 
-- download xampp from  [xampp-download](https://www.apachefriends.org/download.html)
+- download xampp from [xampp-download](https://www.apachefriends.org/download.html).
 
 - install xampp as close to your root folder on the drive as possible.  
-after installing open `../xampp/htdocs`.
+after installing open `../xampp`.
 
-- create folder in `../xampp/htdocs` called `perceptor-weblogger-integration`.  
-in this folder copy the .php files delivered in this project to create our database into an api-endpoint,
+- run `xampp-control` from `../xampp` as administrator.  
+
+![image](https://user-images.githubusercontent.com/29233947/223738417-e90fecc8-a337-4afb-8e45-be8ce3d33247.png)
+
+- turn on Apache & MySql server from xampp-control ui.  
+press the `admin` button from the MySql section in the xampp-control ui, this opens the phpmyadmin-webportal.  
+![image](https://user-images.githubusercontent.com/29233947/223738675-3fb42dca-fda3-4768-a8dc-e3d30c91a99a.png)
+
+- on this page go to `import` button in the top-navigation.
+![image](https://user-images.githubusercontent.com/29233947/223739974-dcba0b20-9a0c-45b6-85fa-60f9ea58f828.png)
+
+- import the file `webdebugmaster.sql` into the database with the standard settings.
+
+- create folder in `../xampp/htdocs` called `webdebugmaster`.
+![image](https://user-images.githubusercontent.com/29233947/223740381-ed37d881-43a0-4af4-8cd3-8725fd79c02b.png)
+
+- in this folder copy the `.php` files delivered in this project to create our api-routes for the database.
 
   - `${name}data.php` for retrieving data from database.  
     `insert${name}.php` for pushing data to database.
 
-- copy config.example.ini rename to config.ini  
+- copy config.example.ini and rename to config.ini.  
 change database info to the access information for your database (default install of xampp requires no changes needed).
-
-- run `xampp-control` from `../xampp` as administrator  
-turn on Apache & MySql server from xampp-control ui.  
-press the admin button from the MySql section in the xampp-control ui, this opens the phpmyadmin page.  
-on this page go to import sectiotion in the nav-menu.
-
-- import the file `webdebugmaster.sql` into mysql database with the standard settings.
 
 
 ### react-project
 
 #### configuration
 
-- open the rootfolder in command prompt.  
-run command `cd perceptor-weblogger-integration`    
-and `npm init` in cmd.
+- open the rootfolder of this project in command prompt.  
+run command `cd perceptor-weblogger-integration` and `npm init` in cmd.
 
-- copy the `config.example.json` and rename to `config.json`.
+![image](https://user-images.githubusercontent.com/29233947/223737933-2f7e07cb-9f27-4af6-8633-b4b2dde8bb5f.png)
 
-- change the `serverURL` in `config.json` to your database entry point link.
+- copy the `config.example.json` and rename to `config.json`.  
+change the `serverURL` in `config.json` to your database entry point link.
 
 #### run website
 
@@ -83,8 +91,7 @@ and `npm init` in cmd.
 
 - open rootfolder from this project in command prompt. 
 
-- run command `cd perceptor-weblogger-integration`  
-and `npm run build`in cmd
+- run command `cd perceptor-weblogger-integration` and `npm run build`in cmd
 
 - website compiles into `../perceptor-weblogger-integration/dist` folder.  
 the file `index.html` in this folders opens the website
@@ -98,19 +105,6 @@ and `npm run dev` in cmd
 
 
 ## hosted webserver
-
-
-set up php my admin
-
-add the php routes
-
-set up the config files
-copy config.example file 
-
-build react project from in cd perceptor-weblogger-integration
-
-
-add static html main.js to your www root
 
 # License
 

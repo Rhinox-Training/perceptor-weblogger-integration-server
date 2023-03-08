@@ -52,7 +52,7 @@ after installing open `../xampp`.
 
 ![image](https://user-images.githubusercontent.com/29233947/223738417-e90fecc8-a337-4afb-8e45-be8ce3d33247.png)
 
-- turn on Apache & MySql server from xampp-control ui.  
+- turn on `Apache & MySql` server from xampp-control ui.  
 press the `admin` button from the MySql section in the xampp-control ui, this opens the phpmyadmin-webportal.  
 ![image](https://user-images.githubusercontent.com/29233947/223738675-3fb42dca-fda3-4768-a8dc-e3d30c91a99a.png)
 
@@ -69,7 +69,7 @@ press the `admin` button from the MySql section in the xampp-control ui, this op
   - `${name}data.php` for retrieving data from database.  
     `insert${name}.php` for pushing data to database.
 
-- copy config.example.ini and rename to config.ini.  
+- copy `config.example.ini` and rename to `config.ini`.  
 change database info to the access information for your database (default install of xampp requires no changes needed).
 
 
@@ -83,7 +83,7 @@ run command `cd perceptor-weblogger-integration` and `npm init` in cmd.
 ![image](https://user-images.githubusercontent.com/29233947/223737933-2f7e07cb-9f27-4af6-8633-b4b2dde8bb5f.png)
 
 - copy the `config.example.json` and rename to `config.json`.  
-change the `serverURL` in `config.json` to your database entry point link.
+change the `serverURL` in `config.json` to your datapoint configuration if you made custom-changes.
 
 #### run website
 
@@ -98,9 +98,10 @@ the file `index.html` in this folders opens the website
 
 ##### run with webpack web server
 
-- open rootfolder from this project in command prompt. 
+- open rootfolder in command prompt. 
 
-- run command `cd perceptor-weblogger-integration` and `npm run dev` in cmd
+- run command `cd perceptor-weblogger-integration`  
+and `npm run dev` in cmd
 
 
 ## hosted webserver
